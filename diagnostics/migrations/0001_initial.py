@@ -7,19 +7,29 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Patient',
+            name="Patient",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('lastName', models.CharField(blank=True, max_length=256, null=True)),
-                ('givenName', models.CharField(blank=True, max_length=256, null=True)),
-                ('gender', models.CharField(blank=True, max_length=32, null=True)),
-                ('dateOfBirth', models.DateField(blank=True, null=True)),
-                ('socialSecurityNumber', models.CharField(blank=True, max_length=16, null=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("lastName", models.CharField(blank=True, max_length=256, null=True)),
+                ("givenName", models.CharField(blank=True, max_length=256, null=True)),
+                ("gender", models.CharField(blank=True, max_length=32, null=True)),
+                ("dateOfBirth", models.DateField(blank=True, null=True)),
+                (
+                    "socialSecurityNumber",
+                    models.CharField(blank=True, max_length=16, null=True),
+                ),
             ],
         ),
     ]
